@@ -42,6 +42,33 @@ select count(ipl_team) from cricket group by desination;
 select records,jersey_no,player_name from cricket group by s_num;
 select (player_name) as cricketer from cricket having cricketer;
 select * from cricket where player_name between 'rohit sharma' and 'yuzi chahal' order by player_name;
+select* from cricket where records>99 and (player_name like 'm%' or player_name like's%');
+select ipl_team ,if (ipl_team='CSK','becomes a champion in 2025','whistle podu') from cricket;
+select count(distinct jersey_no) from cricket;
+select sum(jersey_no) from cricket;
+select max(records) from cricket;
+select min(records) from cricket;
+select avg(records) from cricket;
+select count(ipl_team) from cricket where ipl_team='CSK';
+select player_name,records from cricket where ipl_team='MI';
+select player_name from cricket order by player_name asc;
+select player_name,ipl_team,records from cricket order by records desc;
+select sum(records),ipl_team from cricket group by ipl_team;
+select avg(records),country from cricket group by country;
+select count(country),country from cricket group by country;
+select count(desination),desination from cricket group by desination;
+select count(player_name),ipl_team from cricket group by ipl_team;
+select count(records) as record,ipl_team from cricket group by ipl_team order by record desc;
+select avg(records) as record,ipl_team from cricket group by ipl_team order by record asc;
+select avg(records) as record,country from cricket group by country order by record desc;
+select sum(records) as record,country from cricket group by country having record>100 order by country asc;
+select avg(records) as record,country from cricket group by country having record>100 order by country desc;
+select count(records) as record,country from cricket group by country having record>2 order by record asc;
+
+
+
+
+
 
 
 
